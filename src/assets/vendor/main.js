@@ -6,7 +6,7 @@
 */
 (function() {
     "use strict";
-  
+
     /**
      * Easy selector helper function
      */
@@ -18,7 +18,7 @@
         return document.querySelector(el)
       }
     }
-  
+
     /**
      * Easy event listener function
      */
@@ -32,14 +32,14 @@
         }
       }
     }
-  
+
     /**
-     * Easy on scroll event listener 
+     * Easy on scroll event listener
      */
     const onscroll = (el, listener) => {
       el.addEventListener('scroll', listener)
     }
-  
+
     /**
      * Back to top button
      */
@@ -55,26 +55,24 @@
       window.addEventListener('load', toggleBacktotop)
       onscroll(document, toggleBacktotop)
     }
-  
+
     /**
      * Mobile nav toggle
-     */
+
     on('click', '.mobile-nav-toggle', function(e) {
       select('#navbar').classList.toggle('navbar-mobile')
       this.classList.toggle('bi-list')
       this.classList.toggle('bi bi-list mobile-nav-toggle')
     })
-  
-    /**
-     * Mobile nav dropdowns activate
-     */
+
+
     on('click', '.navbar .dropdown > a', function(e) {
       if (select('#navbar').classList.contains('navbar-mobile')) {
         e.preventDefault()
         this.nextElementSibling.classList.toggle('dropdown-active')
       }
     }, true)
-  
+    */
     /**
      * Preloader
      */
@@ -84,7 +82,7 @@
         preloader.remove()
       });
     }
-  
+
     /**
      * Testimonials slider
      */
@@ -106,14 +104,14 @@
           slidesPerView: 1,
           spaceBetween: 20
         },
-  
+
         1200: {
           slidesPerView: 2,
           spaceBetween: 20
         }
       }
     });
-  
+
     /**
      * Animation on scroll
      */
@@ -125,10 +123,10 @@
         mirror: false
       })
     });
-  
+
     /**
-     * Initiate Pure Counter 
+     * Initiate Pure Counter
      */
     new PureCounter();
-  
+
   })()
