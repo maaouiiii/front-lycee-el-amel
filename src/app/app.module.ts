@@ -12,6 +12,9 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
 import { EventsComponent } from './pages/events/events.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -25,10 +28,13 @@ import { ContactComponent } from './pages/contact/contact.component';
     EventsComponent,
     PricingComponent,
     ContactComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
