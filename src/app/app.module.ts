@@ -12,6 +12,9 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
 import { EventsComponent } from './pages/events/events.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { ContactComponent } from './pages/contact/contact.component';
     TeachersComponent,
     EventsComponent,
     PricingComponent,
-    ContactComponent
+    ContactComponent,
+    CoursesComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -9,11 +9,13 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { CoursesComponent } from './pages/courses/courses.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
     children: [
        {path: 'index', component: IndexComponent},
+       {path: 'cours', component: AboutComponent},
        {path: 'about', component: AboutComponent},
        {path: 'teachers', component: TeachersComponent},
        {path: 'events', component: EventsComponent},
