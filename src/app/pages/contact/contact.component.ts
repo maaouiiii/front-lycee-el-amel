@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Contact } from 'src/app/model/contact';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
 
@@ -13,7 +13,11 @@ import { Observable, map } from 'rxjs';
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
   contact: Contact = new Contact();
-  api: string = 'https://mailthis.to/haykel.maaoui@gmail.com';
+  api: string = 'https://formspree.io/f/xayzeqyo';
+  submited: boolean = false;
+  successMsg!: string;
+  errorMsg!: string;
+
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -32,6 +36,7 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.invalid) {
       return;
     }
+    this.submited = true;
     // remplir object contact
     this.contact.name = this.contactForm.value.name;
     this.contact.email = this.contactForm.value.email;
@@ -43,8 +48,24 @@ export class ContactComponent implements OnInit {
 
   }
 
-  SendEmail(input: any) {
-    this.http.post(this.api, input.name).subscribe(
-    )
+  SendEmail(input: Contact) {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    this.http.post(this.api,
+      { name: this.contact.name, replyto: this.contact.email, subject: this.contact.subject, message: this.contact.message },
+      { 'headers': headers }).subscribe({
+        next: (
+          (response => {
+            console.info(response);
+            this.initForm();
+            this.successMsg = 'Your message has been sent. Thank you!'
+          })
+        ),
+        error: (
+          (error) => {
+            this.errorMsg = error.error.error;
+          }
+        )
+      }
+      );
   }
 }
