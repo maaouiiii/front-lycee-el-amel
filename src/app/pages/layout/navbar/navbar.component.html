@@ -6,17 +6,19 @@
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
+      <nav id="navbar" #navbar class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" routerLink="/index">Home</a></li>
-          <li><a routerLink="/cours>">Courses</a></li>
-          <li><a routerLink="/about">About</a></li>
-          <li><a routerLink="/teachers">Trainers</a></li>
-          <li><a routerLink="/events">Events</a></li>
-          <li><a routerLink="/pricing">Pricing</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </ul></nav><!-- .navbar -->
+          <li><a routerLink="/index" routerLinkActive="active">Home </a></li>
+          <li><a routerLink="/courses"routerLinkActive="active">Courses</a></li>
+          <li><a routerLink="/about"routerLinkActive="active">About</a></li>
+          <li><a routerLink="/teachers"routerLinkActive="active">Trainers</a></li>
+          <li><a routerLink="/events"routerLinkActive="active">Events</a></li>
+          <li><a routerLink="/pricing"routerLinkActive="active">Pricing</a></li>
+          <li><a routerLink="/contact"routerLinkActive="active">Contact</a></li>
+          
+      </ul>
+      <i #mobileNavToggle class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
 
       <!--<a class="get-started-btn">Get Started</a>!-->
       <a routerLink="/about" class="get-started-btn">Get Started</a>
