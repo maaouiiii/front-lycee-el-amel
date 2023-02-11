@@ -13,7 +13,7 @@ import { Observable, map } from 'rxjs';
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
   contact: Contact = new Contact();
-  api: string = 'https://formspree.io/f/xayzeqyo';
+  api: string = 'https://formspree.io/f/mzbqejrv';
   submited: boolean = false;
   successMsg!: string;
   errorMsg!: string;
