@@ -1,0 +1,157 @@
+<div class="breadcrumbs" data-aos="fade-in">
+  <div class="container">
+    <h2>établissement des students</h2>
+    <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+  </div>
+</div>
+<!-- End Breadcrumbs -->
+ <section id="pricing" class="pricing">
+  <div class="col-lg-8 mt-5 mt-lg-0">
+    <form [formGroup]="studentform" (ngSubmit)="onSubmit">
+      <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" name="Name" formControlName="Name" class="form-control" id="Name" placeholder="Your Name">
+      </div>
+      <div class="col-md-6 form-group mt-3 mt-md-0">
+        <label for="gender">Select your gender:</label>
+        <select id="Gender" name="Gender" formControlName="Gender">
+          <option *ngFor="let order of genders" [value]="order.name">
+            {{order.name}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Class" class="form-control" id="Class" name="Class" placeholder="Class" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Seat" class="form-control" id="Seat" name="Seat" placeholder="Seat" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Club" class="form-control" id="Club" name="Club" placeholder="Club" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Persona" class="form-control" id="Persona" name="Persona" placeholder="Persona" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Crush" class="form-control" id="Crush" name="Crush" placeholder="Crush" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="BreastSize" class="form-control" id="BreastSize" placeholder="Breast Size">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Strength" class="form-control" id="Strength" name="Strength" placeholder="Strength" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Hairstyle" class="form-control" id="Hairstyle" name="Hairstyle" placeholder="Hairstyle" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Color" class="form-control" id="Color"  name="Color" placeholder="Color" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Eyes" class="form-control" id="Eyes"  name="Eyes" placeholder="Eyes" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="EyeType" class="form-control" id="EyeType" name="EyeType" placeholder="EyeType" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Stockings" class="form-control" id="Stockings" name="Stockings" placeholder="Stockings" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Accessory" class="form-control" id="Accessory" name="Accessory" placeholder="Accessory" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="ScheduleTime" class="form-control" id="ScheduleTime" name="ScheduleTime" placeholder="ScheduleTime" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="ScheduleDestination" class="form-control" id="ScheduleDestination"  name="ScheduleDestination" placeholder="ScheduleDestination" >
+      </div>
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="ScheduleAction" class="form-control" id="ScheduleAction" name="ScheduleAction" placeholder="ScheduleAction" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <input type="text" formControlName="Info" class="form-control" id="Info" name="Info" placeholder="Info" >
+      </div>
+    </div>
+      <!-- Repeat the above structure for the remaining fields -->
+
+      <button type="submit" class="btn btn-primary" [disabled]="studentform.invalid" (click)="onSubmit()">Submit</button>
+    </form>
+    
+    
+    
+    
+
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Class</th>
+        <th scope="col">Seat</th>
+        <th scope="col">Club</th>
+        <th scope="col">Persona</th>
+        <th scope="col">Crush</th>
+        <th scope="col">BreatSize</th>
+        <th scope="col">Strength</th>
+        <th scope="col">Hairstyle</th>
+        <th scope="col">Color</th>
+        <th scope="col">Eyes</th>
+        <th scope="col">EyeType</th>
+        <th scope="col">Stockings</th>
+        <th scope="col">Accessory</th>
+        <th scope="col">ScheduleTime</th>
+        <th scope="col">ScheduleDestination</th>
+        <th scope="col">ScheduleAction</th>
+        <th scope="col">Info</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of tableData; let i = index">
+        <td>{{ data.Name }}</td>
+        <td>{{ data.Gender }}</td>
+        <td>{{ data.Class }}</td>
+        <td>{{ data.Seat }}</td>
+        <td>{{ data.Club }}</td>
+        <td>{{ data.Persona }}</td>
+        <td>{{ data.Crush }}</td>
+        <td>{{ data.BreastSize }}</td>
+        <td>{{ data.Strength }}</td>
+        <td>{{ data.Hairstyle }}</td>
+        <td>{{ data.Color }}</td>
+        <td>{{ data.Eyes }}</td>
+        <td>{{ data.EyeType }}</td>
+        <td>{{ data.Stockings }}</td>
+        <td>{{ data.Accessory }}</td>
+        <td>{{ data.ScheduleTime }}</td>
+        <td>{{ data.ScheduleDestination }}</td>
+        <td>{{ data.ScheduleAction }}</td>
+        <td>{{ data.Info }}</td>
+        <td>
+          <button (click)="editRow(i)">Edit</button>
+        <button (click)="deleteRow(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    
+  </table>
+ </section>

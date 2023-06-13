@@ -1,0 +1,59 @@
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs" data-aos="fade-in">
+    <div class="container">
+      <h2>établissement des students</h2>
+      <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="pricing">
+    <div class="container" data-aos="fade-up">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Class</th>
+            <th scope="col">Seat</th>
+            <th scope="col">Club</th>
+            <th scope="col">Persona</th>
+            <th scope="col">Crush</th>
+            <th scope="col">BreatSize</th>
+            <th scope="col">Strength</th>
+            <th scope="col">Hairstyle</th>
+            <th scope="col">Color</th>
+            <th scope="col">Eyes</th>
+            <th scope="col">EyeType</th>
+            <th scope="col">Stockings</th>
+            <th scope="col">Accessory</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of redStudents">
+              <th scope="row">{{ student.ID }}</th>
+              <td>{{ student.Name }}</td>
+              <td>{{ student.Gender }}</td>
+              <td>{{ student.Class }}</td>
+              <td>{{ student.Seat }}</td>
+              <td>{{ student.Club }}</td>
+              <td>{{ student.Persona }}</td>
+              <td>{{ student.Crush }}</td>
+              <td>{{ student.BreastSize }}</td>
+              <td>{{ student.Strength }}</td>
+              <td>{{ student.Hairstyle }}</td>
+              <td>{{ student.Color }}</td>
+              <td>{{ student.Eyes }}</td>
+              <td>{{ student.EyeType }}</td>
+              <td>{{ student.Stockings }}</td>
+              <td>{{ student.Accessory }}</td>
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>
+  </section><!-- End Pricing Section -->
+
+</main><!-- End #main -->

@@ -14,6 +14,9 @@ import { PricingComponent } from './pages/pricing/pricing.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentsComponent } from './pages/students/students.component';
+import { FromstudentsComponent } from './pages/fromstudents/fromstudents.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -29,12 +32,15 @@ import { HttpClientModule } from '@angular/common/http';
     EventsComponent,
     PricingComponent,
     ContactComponent,
+    StudentsComponent,
+    FromstudentsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

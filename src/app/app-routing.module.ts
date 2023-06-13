@@ -9,6 +9,8 @@ import { TeachersComponent } from './pages/teachers/teachers.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { StudentsComponent } from './pages/students/students.component';
+import { FromstudentsComponent } from './pages/fromstudents/fromstudents.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent,
@@ -19,6 +21,8 @@ const routes: Routes = [
        {path: 'events', component: EventsComponent},
        {path: 'pricing', component: PricingComponent},
        {path: 'contact', component: ContactComponent},
+       {path: 'students', component: StudentsComponent},
+       {path: 'formstudents', component: FromstudentsComponent},
 
        { path: '', redirectTo: 'index', pathMatch: 'full' },
 
